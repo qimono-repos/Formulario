@@ -14,9 +14,9 @@ public partial class MainPage : ContentPage
 		count++;
 
 		if (count == 1)
-			CounterBtn.Text = $"Evento {count} time";
+			CounterBtn.Text = $"Evento : primera vez";
 		else
-			CounterBtn.Text = $"Eventos {count} times";
+			CounterBtn.Text = $"Eventos : {count} veces";
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}

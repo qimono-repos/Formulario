@@ -14,15 +14,22 @@
                 SemanticProperties.Description="dot net bot in a race car number eight" /> -->
 
             <Label
-                Text="Hello!!!"
+                Text="esta es la pantalla principal"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
+            <Label
+                Text="hola &#10;return "
+                Style="{StaticResource SubHeadline}"/>
 
             <Label
                 Text="Formulario &#10;Version 1.0.0"
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+            <Entry
+                Placeholder="escriba la fecha deseada"
+                PlaceholderColor="BlueViolet"
+                />
 
 
             <Button

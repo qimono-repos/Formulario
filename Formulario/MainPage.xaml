@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Formulario.MainPage">
 
-    <ScrollView>
+        <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
@@ -12,29 +12,43 @@
                 HeightRequest="185"
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a race car number eight" /> -->
+            <Label
+                Text="Planilla"
+                Style= "{StaticResource Titulo}"
+                TextColor="White"
+                />
+            <Label
+                Text="Numero" />
+            <Entry
+                Placeholder="Registro"
+                />
+            <Label
+                Text="Sitio"/>
+             <Entry
+                Placeholder="completar"
+                PlaceholderColor="Grey"/>   
 
             <Label
-                Text="esta es la pantalla principal"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
-            <Label
-                Text="hola &#10;return "
-                Style="{StaticResource SubHeadline}"/>
-
-            <Label
-                Text="Formulario &#10;Version 1.0.0"
-                Style="{StaticResource SubHeadline}"
+                Text="Codigo de documento"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
             <Entry
-                Placeholder="escriba la fecha deseada"
-                PlaceholderColor="BlueViolet"
-                />
+                Placeholder="Numero"
+                PlaceholderColor="Grey"/>
 
-
+            <Label
+                Text="Fecha"/>
+            <Entry
+                Placeholder="Seleccione la opcion"
+                PlaceholderColor="Grey"/>
+            <Label
+                Text="Gerencia"/>
+            <Entry
+                Placeholder="Seleccion la opcion"
+                PlaceholderColor="Grey"/>
             <Button
                 x:Name="CounterBtn"
-                Text="OK" 
+                Text="SIGUIENTE" 
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />

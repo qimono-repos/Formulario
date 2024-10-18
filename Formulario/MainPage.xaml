@@ -38,9 +38,11 @@
 
             <Label
                 Text="Fecha"/>
-            <Entry
-                Placeholder="Seleccione la opcion"
-                PlaceholderColor="Grey"/>
+            
+            <DatePicker MinimumDate="10/18/2024"
+                MaximumDate="10/31/2024"
+                Date="10/21/2024" 
+                />
             <Label
                 Text="Gerencia"/>
             <Entry

@@ -13,14 +13,15 @@
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a race car number eight" /> -->
             <Label
-                Text="Planilla"
+                Text="Planilla 2 DATOS GENERALES"
                 Style= "{StaticResource Titulo}"
                 TextColor="White"
                 />
             <Label
                 Text="Numero" />
             <Entry
-                Placeholder="Registro"
+                Placeholder="(seleccione opcion)"
+                Keyboard="Numeric"
                 />
             <Label
                 Text="Sitio"/>
@@ -47,7 +48,8 @@
                 Text="Gerencia"/>
             <Entry
                 Placeholder="Seleccion la opcion"
-                PlaceholderColor="Grey"/>
+                PlaceholderColor="Grey"
+                Completed="OnCounterCompleted"/>
             <Button
                 x:Name="CounterBtn"
                 Text="SIGUIENTE" 
@@ -55,6 +57,7 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
+
     </ScrollView>
 
 </ContentPage>

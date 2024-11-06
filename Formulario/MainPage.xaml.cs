@@ -19,6 +19,12 @@ public partial class MainPage : ContentPage
 			CounterBtn.Text = $"Eventos : {count} veces";
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
+
+	}
+
+	private void OnCounterCompleted(object s, EventArgs e)
+	{
+		CounterBtn.Text = $"Completado";
 	}
 }
 

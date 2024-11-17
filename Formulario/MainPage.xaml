@@ -18,41 +18,63 @@
                 TextColor="White"
                 />
             <Label
-                Text="Numero" />
+                Text="Distancia" />
             <Entry
-                Placeholder="(seleccione opcion)"
+                Placeholder="Tramo lineal entre los extremos"
                 Keyboard="Numeric"
                 />
             <Label
-                Text="Sitio"/>
+                Text="Peso"/>
              <Entry
-                Placeholder="completar"
-                PlaceholderColor="Grey"/>   
+                Placeholder="Pesaje en Kg."
+                PlaceholderColor="Grey"
+                Keyboard="Numeric"
+                />
 
             <Label
-                Text="Codigo de documento"
+                Text="Pendiente"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
             <Entry
-                Placeholder="Numero"
-                PlaceholderColor="Grey"/>
-
-            <Label
-                Text="Fecha"/>
+                Placeholder="Angulo en relacion al nivel 0"
+                PlaceholderColor="Grey"
+                Keyboard="Numeric"/>
+            <Picker x:Name="SolicitantePicker" Title="Unidad de medida">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Grados</x:String>
+                        <x:String>Radianes</x:String>
+                        <x:String> m = (y2 - y1) / (x2 - x1) </x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
             
-            <DatePicker MinimumDate="10/18/2024"
-                MaximumDate="10/31/2024"
-                Date="10/21/2024" 
-                />
             <Label
+                Text="Temperatura "
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+            <Entry
+                Placeholder="Condicion clima la momento de instalar"
+                PlaceholderColor="Grey"
+                Keyboard="Numeric"/>
+
+            <!-- <Label
+                Text="Fecha"/> -->
+
+            <!-- <DatePicker MinimumDate="10/18/2024"
+                MaximumDate="10/31/2024"
+                Date="10/21/2024"
+                /> -->
+            <!-- <Label
                 Text="Gerencia"/>
             <Entry
                 Placeholder="Seleccion la opcion"
                 PlaceholderColor="Grey"
-                Completed="OnCounterCompleted"/>
+                Completed="OnCounterCompleted"/> -->
+
             <Button
                 x:Name="CounterBtn"
-                Text="SIGUIENTE" 
+                Text="SIGUIENTE"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />

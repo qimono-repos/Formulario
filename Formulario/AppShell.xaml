@@ -8,7 +8,7 @@
     Title="Formulario">
 
     <ShellContent
-        Title="Home"
+        Title="CALCULADOR DE VARIABLES"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 

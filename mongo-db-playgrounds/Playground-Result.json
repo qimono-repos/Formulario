@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "jkl",
+    "totalSaleAmount": 20
+  },
+  {
+    "_id": "xyz",
+    "totalSaleAmount": 150
+  },
+  {
+    "_id": "abc",
+    "totalSaleAmount": 120
+  }
+]

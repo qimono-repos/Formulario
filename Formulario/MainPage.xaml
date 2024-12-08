@@ -51,6 +51,13 @@
                 PlaceholderColor="Grey"
                 Completed="OnCounterCompleted"/>
             <Button
+                x:Name="CameraBtn"
+                Text="CAMARA" 
+                SemanticProperties.Hint="Take a photo or selfie"
+                HorizontalOptions="Fill" 
+            />
+            <Button
+                IsVisible="False"
                 x:Name="CounterBtn"
                 Text="SIGUIENTE" 
                 SemanticProperties.Hint="Counts the number of times you click"

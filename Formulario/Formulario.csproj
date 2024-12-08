@@ -40,6 +40,11 @@
 	<PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
 	  <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
+	  <CodesignKey>Apple Development: Edwin Gonzales (SL3DRGJJPV)</CodesignKey>
+	  <CodesignProvision>VS: WildCard Development</CodesignProvision>
+	  <ProvisioningType>manual</ProvisioningType>
+	</PropertyGroup>
 
 	<ItemGroup>
 		<!-- App Icon -->

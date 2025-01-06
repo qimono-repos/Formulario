@@ -16,6 +16,26 @@
                 VerticalOptions="Center"
             >
             </Image>
+            <Frame 
+                Grid.Row="0" 
+                Grid.Column="1" 
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                BorderColor="DarkGray"
+                Margin="5"
+                Padding="4"
+                HasShadow="False"
+                IsVisible="{Binding UpdateFace1}"
+                >
+                <!-- <StackLayout Padding="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Black"  > -->
+                    <Image 
+                        BackgroundColor="Transparent"
+                        VerticalOptions="Fill"
+                        Aspect="AspectFit"
+                        Source="{Binding PhotoPath}" 
+                        HeightRequest="100" />
+                <!-- </StackLayout> -->
+            </Frame>
 
             <Button
                 x:Name="CounterBtn"

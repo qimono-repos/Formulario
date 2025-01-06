@@ -7,54 +7,22 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <!-- <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" /> -->
-            <Label
-                Text="Planilla 2 DATOS GENERALES"
-                Style= "{StaticResource Titulo}"
-                TextColor="White"
-                />
-            <Label
-                Text="Numero" />
-            <Entry
-                Placeholder="(seleccione opcion)"
-                Keyboard="Numeric"
-                />
-            <Label
-                Text="Sitio"/>
-             <Entry
-                Placeholder="completar"
-                PlaceholderColor="Grey"/>   
 
-            <Label
-                Text="Codigo de documento"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
-            <Entry
-                Placeholder="Numero"
-                PlaceholderColor="Grey"/>
+            <Image 
+                Source="face1.png"
+                HeightRequest="150" 
+                WidthRequest="150" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+            >
+            </Image>
 
-            <Label
-                Text="Fecha"/>
-            
-            <DatePicker MinimumDate="10/18/2024"
-                MaximumDate="10/31/2024"
-                Date="10/21/2024" 
-                />
-            <Label
-                Text="Gerencia"/>
-            <Entry
-                Placeholder="Seleccion la opcion"
-                PlaceholderColor="Grey"
-                Completed="OnCounterCompleted"/>
             <Button
                 x:Name="CounterBtn"
-                Text="SIGUIENTE" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+                Text="Abrir la cámara" 
+                SemanticProperties.Hint="Importar fotos desde galeria"
+                ClassId="1" 
+                Clicked="OpenAddPhoto_Clicked"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
 

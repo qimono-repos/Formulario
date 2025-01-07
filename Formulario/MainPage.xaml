@@ -33,9 +33,10 @@
                         VerticalOptions="Fill"
                         Aspect="AspectFit"
                         Source="{Binding PhotoPath}" 
-                        HeightRequest="100" />
+                        HeightRequest="200" />
                 <!-- </StackLayout> -->
             </Frame>
+            <Label Text="{Binding PhotoPath}" TextColor="Black" IsVisible="False" />
 
             <Button
                 x:Name="CounterBtn"

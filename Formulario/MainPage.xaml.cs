@@ -4,16 +4,18 @@
 using Microsoft.Maui.Media;
 using System.Security.Cryptography;
 using System.Runtime.CompilerServices;
+using System.ComponentModel;
 
 //using Android.App;
 
 
 namespace Formulario;
 
-public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage, INotifyPropertyChanged
 {
 	int count = 0;
-	protected bool SetProperty<T>(
+    //public event PropertyChangedEventHandler PropertyChanged;
+    protected bool SetProperty<T>(
 		ref T backingStore, T value,
 		[CallerMemberName]string propertyName = "",
 		Action onChanged = null)
@@ -41,7 +43,8 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-	}
+        BindingContext = this;
+    }
 
     public async void OpenAddPhoto_Clicked(object sender, EventArgs e)
     {
@@ -62,10 +65,8 @@ public partial class MainPage : ContentPage
                     FacePhoto1 = Path.GetFileName(newFile);
                     PhotoPath = newFile;
 
-                    // Save the file and compute hash
                     SaveFile(out byte[] fileImage, out string codeHash);
 
-                    // Use the fileImage and codeHash as needed
                 }
             }
             else

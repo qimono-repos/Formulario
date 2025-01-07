@@ -79,7 +79,31 @@ public partial class MainPage : ContentPage, INotifyPropertyChanged
             await DisplayAlert("Error", ex.Message, "OK");
         }
     }
+    public async void OpenAddGallery_Clicked(object sender, EventArgs e)
+    {
+        try
+        {
+            var photo = await MediaPicker.Default.PickPhotoAsync();
 
+            if (photo != null)
+            {
+                var newFile = Path.Combine(FileSystem.AppDataDirectory, $"{DateTime.Now:yyyyMMddHHmmss}.jpg");
+
+                using (var stream = await photo.OpenReadAsync())
+                using (var newStream = File.OpenWrite(newFile))
+                    await stream.CopyToAsync(newStream);
+
+                FacePhoto1 = Path.GetFileName(newFile);
+                PhotoPath = newFile;
+
+                SaveFile(out byte[] fileImage, out string codeHash);
+            }
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", ex.Message, "OK");
+        }
+    }
     private void SaveFile(out byte[] FileImage, out string CodeHash)
     {
         if (!string.IsNullOrEmpty(PhotoPath))

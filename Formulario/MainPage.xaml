@@ -37,14 +37,22 @@
                 <!-- </StackLayout> -->
             </Frame>
             <Label Text="{Binding PhotoPath}" TextColor="Black" IsVisible="False" />
+            <Grid Grid.Row="2" HorizontalOptions="Fill" Padding="20,10,20,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="CounterBtn" Grid.Column="0" Text="Cámara" Style="{StaticResource buttonNav}" Margin="0,0,12,0" Clicked="OpenAddPhoto_Clicked"/>
+                <Button x:Name="GalleryBtn" Grid.Column="1" Text="Galería" Style="{StaticResource buttonNav}" Margin="12,0,0,0" Clicked="OpenAddGallery_Clicked"/>
+            </Grid>
 
-            <Button
+            <!--<Button
                 x:Name="CounterBtn"
                 Text="Abrir la cámara" 
                 SemanticProperties.Hint="Importar fotos desde galeria"
                 ClassId="1" 
                 Clicked="OpenAddPhoto_Clicked"
-                HorizontalOptions="Fill" />
+                HorizontalOptions="Fill" />-->
         </VerticalStackLayout>
 
     </ScrollView>

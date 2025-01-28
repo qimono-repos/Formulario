@@ -87,16 +87,7 @@ public partial class MainPage : ContentPage, INotifyPropertyChanged
 
             if (photo != null)
             {
-                var newFile = Path.Combine(FileSystem.AppDataDirectory, $"{DateTime.Now:yyyyMMddHHmmss}.jpg");
-
-                using (var stream = await photo.OpenReadAsync())
-                using (var newStream = File.OpenWrite(newFile))
-                    await stream.CopyToAsync(newStream);
-
-                FacePhoto1 = Path.GetFileName(newFile);
-                PhotoPath = newFile;
-
-                SaveFile(out byte[] fileImage, out string codeHash);
+                await EcxecuteImport(photo);
             }
         }
         catch (Exception ex)
@@ -104,6 +95,21 @@ public partial class MainPage : ContentPage, INotifyPropertyChanged
             await DisplayAlert("Error", ex.Message, "OK");
         }
     }
+
+    private async Task EcxecuteImport(object photo)
+    {
+        var newFile = Path.Combine(FileSystem.AppDataDirectory, $"{DateTime.Now:yyyyMMddHHmmss}.jpg");
+
+        using (var stream = await photo.OpenReadAsync())
+        using (var newStream = File.OpenWrite(newFile))
+            await stream.CopyToAsync(newStream);
+
+        FacePhoto1 = Path.GetFileName(newFile);
+        PhotoPath = newFile;
+
+        SaveFile(out byte[] fileImage, out string codeHash);
+    }
+
     private void SaveFile(out byte[] FileImage, out string CodeHash)
     {
         if (!string.IsNullOrEmpty(PhotoPath))
